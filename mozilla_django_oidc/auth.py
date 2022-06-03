@@ -229,6 +229,7 @@ class OIDCAuthenticationBackend(ModelBackend):
             verify=self.get_settings('OIDC_VERIFY_SSL', True),
             timeout=self.get_settings('OIDC_TIMEOUT', None),
             proxies=self.get_settings('OIDC_PROXY', None))
+        print(response.content)
         response.raise_for_status()
         return response.json()
 
