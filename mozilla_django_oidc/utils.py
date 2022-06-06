@@ -37,6 +37,7 @@ def import_from_settings(attr, *args):
 
 def absolutify(request, path):
     """Return the absolute URL of a path."""
+    print(request.scheme)
     return request.build_absolute_uri(path)
 
 

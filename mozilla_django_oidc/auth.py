@@ -255,8 +255,6 @@ class OIDCAuthenticationBackend(ModelBackend):
         if not self.request:
             return None
 
-        print(repr(request))
-
         state = self.request.GET.get('state')
         code = self.request.GET.get('code')
         nonce = kwargs.pop('nonce', None)
